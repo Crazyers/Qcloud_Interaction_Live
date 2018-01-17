@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <meta name="renderer" content="webkit"/>
+    <title>互动直播-腾讯云</title>
+    <link rel="stylesheet" href="data:text/css;base64,CiAgICA6Oi13ZWJraXQtc2Nyb2xsYmFyIHsKICAgICAgICB3aWR0aDo4cHg7CiAgICAgICAgbWFyZ2luOjAgMXB4OwogICAgICAgIGJhY2tncm91bmQ6ICM2NTY1NjU7CiAgICB9CiAgICA6Oi13ZWJraXQtc2Nyb2xsYmFyOmhvcml6b250YWx7CiAgICAgICAgaGVpZ2h0OiA4cHg7CiAgICB9CgogICAgOjotd2Via2l0LXNjcm9sbGJhci1idXR0b257CiAgICAgICAgaGVpZ2h0OiAwOwogICAgfQoKICAgIDo6LXdlYmtpdC1zY3JvbGxiYXItdHJhY2sgewogICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDsKICAgIH0KICAgIDo6LXdlYmtpdC1zY3JvbGxiYXItdHJhY2stcGllY2UgewogICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM2NTY1NjU7CiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4OwogICAgfQogICAgOjotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7CiAgICAgICAgd2lkdGg6OHB4OwogICAgICAgIG1hcmdpbjogMCAxcHg7CiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4OwogICAgICAgIGJhY2tncm91bmQ6ICM0NTQ1NDU7CiAgICB9CiAgICA6Oi13ZWJraXQtc2Nyb2xsYmFyLXRodW1iOmhvdmVyIHsKICAgICAgICBiYWNrZ3JvdW5kOiAjMTExMTExOwogICAgfQoKCgoKICAgIGJvZHkgewogICAgICAgIGJhY2tncm91bmQ6ICMxNzFkMjE7CiAgICAgICAgZm9udC1zaXplOiAxNHB4OwogICAgICAgIGxpbmUtaGVpZ2h0OjIuMTAyNTsKICAgICAgICBmb250LWZhbWlseTogIk1lbmxvIiwgIkFuZGFsZSBNb25vIiwgbW9ub3NwYWNlLCAiRHJvaWQgU2FucyBGYWxsYmFjayIsICJNaWNyb3NvZnQgWWFIZWkiLCBzYW5zLXNlcmlmOwogICAgICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7CiAgICAgICAgY29sb3I6ICNhNWIwYzA7CiAgICAgICAgcGFkZGluZzogMCAzOHB4OwogICAgICAgIG1heC13aWR0aDogODIwcHg7CiAgICAgICAgbWFyZ2luOiAwIGF1dG87CiAgICAgICAgd29yZC13cmFwOmJyZWFrLXdvcmQ7CgogICAgICAgIG92ZXJmbG93LXg6IGhpZGRlbjsKICAgICAgICB0ZXh0LXJlbmRlcmluZzogb3B0aW1pemVMZWdpYmlsaXR5OwogICAgICAgIC13ZWJraXQtdGV4dC1zaXplLWFkanVzdDogbm9uZTsKICAgIH0KCiAgICBicnsKICAgICAgICBsaW5lLWhlaWdodDogMi4xMDI1OwogICAgfQoKCgogICAgQG1lZGlhIChtYXgtd2lkdGg6IDYwMHB4KSB7CiAgICAgICAgYm9keXsKICAgICAgICAgICAgcGFkZGluZzogMCAzMHB4OwogICAgICAgIH0KICAgIH0KCiAgICBAbWVkaWEgKG1heC13aWR0aDogNDgwcHgpIHsKICAgICAgICBib2R5ewogICAgICAgICAgICBwYWRkaW5nOiAwIDIwcHg7CiAgICAgICAgfQogICAgfQoKICAgIC5naXN0ewogICAgICAgIHdvcmQtYnJlYWs6IG5vcm1hbDsKICAgIH0KCiAgICAucG9zdHsKICAgICAgICBtYXJnaW4tdG9wOiAxMHB4OwogICAgICAgIG1hcmdpbi1ib3R0b206IDUwcHg7CiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlOwogICAgfQoKCgogICAgaW1newogICAgICAgIG1heC13aWR0aDogOTglOwogICAgICAgIG1hcmdpbjogMC44ZW0gYXV0byAwLjhlbSBhdXRvOwogICAgICAgIGJvcmRlci1yYWRpdXM6IDVweDsKICAgIH0KCiAgICBoMSBpbWcsIGgyIGltZywgaDMgaW1nLCBoNCBpbWcsIGg1IGltZywgaDYgaW1newogICAgICAgIG1hcmdpbjogYXV0bzsKICAgIH0KCiAgICAueDJfaW1hZ2V7CiAgICAgICAgem9vbTogNTAlOwogICAgfQoKICAgIC54M19pbWFnZXsKICAgICAgICB6b29tOiAzMy4zMyU7CiAgICB9CgogICAgLng0X2ltYWdlewogICAgICAgIHpvb206IDI1JTsKICAgIH0KCgogICAgcCBpbWd7CiAgICAgICAgbWFyZ2luOiAwIGF1dG87CiAgICB9CgogICAgcHsKICAgICAgICB3b3JkLXdyYXA6YnJlYWstd29yZDsKICAgICAgICBvdmVyZmxvdzpoaWRkZW47CiAgICAgICAgbWFyZ2luOiAxLjVlbSAwOwogICAgfQoKICAgIGxpIHB7CiAgICAgICAgbGluZS1oZWlnaHQ6IDEuODg1OwogICAgICAgIG1hcmdpbjogMDsKICAgIH0KCiAgICAucF9wYXJ0IHsKICAgICAgICBtYXJnaW46IDEwcHggMDsKICAgIH0KCiAgICAucF9wYXJ0IHB7CiAgICAgICAgbWFyZ2luOiAwIDAgMC42ZW0gMDsKICAgIH0KCiAgICAvKiB0ZXh0IGluZGVudCBmb3IgY2hpbmVzZSBzdGFydHMqLwogICAgLypoMiwgaDMsIGg0LCBoNSwgaDYsIC5wX3BhcnQgcCwgLnRvZG9faXRlbSwgcHsKICAgICAgICB0ZXh0LWluZGVudDogMHB4OwogICAgfSovCiAgICB0YWJsZSwgcHJlLCBzdmcsIC5jb2RlaGlsaXRldGFibGV7CiAgICAgICAgbWFyZ2luLWxlZnQ6IDBweDsKICAgICAgICBtYXJnaW4tcmlnaHQ6IDBweDsKICAgIH0KCiAgICAuY29kZWhpbGl0ZXRhYmxlIHByZXsKICAgICAgICBtYXJnaW4tbGVmdDogMDsKICAgICAgICBtYXJnaW4tcmlnaHQ6IDA7CgogICAgfQoKICAgIC5jb2RlaGlsaXRldGFibGUgLmNvZGVoaWxpdGUgcHJlewogICAgICAgIGJvcmRlci1sZWZ0OiBub25lOwogICAgfQoKICAgIC8qIHRleHQgaW5kZW50IGZvciBjaGluZXNlIGVuZHMqLwoKCiAgICBibG9ja3F1b3RlIC5wX3BhcnQgcCwgbGkgLnBfcGFydCBwewogICAgICAgIHRleHQtaW5kZW50OiAwICFpbXBvcnRhbnQ7CiAgICB9CgoKICAgIGhyewogICAgICAgIG1hcmdpbjogMzhweCAwOwogICAgICAgIGJvcmRlcjogbm9uZTsKICAgICAgICBib3JkZXItYm90dG9tOiAxcHggZGFzaGVkICMyNTI1MjU7CiAgICAgICAgY29sb3I6ICMyNTI1MjU7CiAgICAgICAgaGVpZ2h0OiAxcHg7CiAgICAgICAgbGluZS1oZWlnaHQ6MXB4OwogICAgICAgIGZvbnQtc2l6ZToxcHg7CiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjsKICAgIH0KCgogICAgaDF7CiAgICAgICAgY29sb3I6ICNlZWVlZWU7CiAgICAgICAgZm9udC1zaXplOiAxLjdlbTsKICAgICAgICB0ZXh0LWFsaWduOiBsZWZ0OwogICAgICAgIG1hcmdpbjogMDsKICAgICAgICBwYWRkaW5nOiAwOwogICAgICAgIGxpbmUtaGVpZ2h0OiAxLjZlbTsKICAgICAgICBtYXJnaW4tdG9wOiAwLjhlbTsKICAgICAgICBtYXJnaW4tYm90dG9tOiAwLjZlbTsKICAgIH0KCiAgICBoMSwgaDIsIGgzLCBoNHsKICAgICAgICBjb2xvcjogI2VlZWVlZTsKICAgIH0KCiAgICBoMSwgaDIsIGgzewogICAgICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7CiAgICB9CgogICAgaDIsIGgzewogICAgICAgIGxpbmUtaGVpZ2h0OiAxLjVlbTsKICAgICAgICBtYXJnaW4tdG9wOiAxLjVlbTsKICAgICAgICBtYXJnaW4tYm90dG9tOiAwLjhlbTsKICAgIH0KCiAgICBoMiB7CiAgICAgICAgZm9udC1zaXplOiAxLjQ1ZW07CiAgICB9CgogICAgaDMgewogICAgICAgIGZvbnQtc2l6ZTogMS4yNWVtCiAgICB9CgoKICAgIG9sIHsKICAgICAgICBtYXJnaW46IDA7CiAgICB9CgogICAgdWx7CiAgICAgICAgcGFkZGluZzogNXB4IDM4cHg7CiAgICAgICAgbWFyZ2luOiAwOwogICAgfQoKICAgIHVsIGxpLCBsaXsKICAgICAgICBwYWRkaW5nOiAwOwogICAgICAgIG1hcmdpbjogMDsKICAgIH0KCiAgICB1bCBwLCBvbCBwewogICAgICAgIG92ZXJmbG93OiB2aXNpYmxlOwogICAgfQoKCiAgICBibG9ja3F1b3RlIHsKICAgICAgICAtbW96LWJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgYm94LXNpemluZzogYm9yZGVyLWJveDsKICAgICAgICBtYXJnaW46IDEuNmVtIDA7CiAgICAgICAgcGFkZGluZzogMCAwIDAgMS4yZW07CiAgICAgICAgYm9yZGVyLWxlZnQ6IDAuNGVtIHNvbGlkICM1NTU1NTU7CiAgICAgICAgY29sb3I6ICM5YTlhOWE7CiAgICAgICAgbWluLWhlaWdodDoyMHB4OwogICAgfQoKCiAgICBibG9ja3F1b3RlIHAgewogICAgICAgIG1hcmdpbjogMC44ZW0gMDsKICAgIH0KCiAgICBibG9ja3F1b3RlIHNwYW4ubWRfbGluZSB7CiAgICAgICAgbWFyZ2luLWJvdHRvbTogMC4yNWVtOwogICAgICAgIG1hcmdpbi10b3A6IDAuMjVlbTsKICAgIH0KCiAgICBibG9ja3F1b3RlIHVsewogICAgICAgIHBhZGRpbmc6IDAgMTVweDsKICAgIH0KCiAgICBibG9ja3F1b3RlIHNtYWxsIHsKICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CiAgICAgICAgbWFyZ2luOiAwLjhlbSAwIDAuOGVtIDEuNWVtOwogICAgICAgIGZvbnQtc2l6ZTogMC45ZW07CiAgICAgICAgY29sb3I6ICNjY2M7CiAgICB9CgoKCiAgICB0YWJsZSB7CiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7CiAgICAgICAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsKICAgICAgICBib3JkZXItc3BhY2luZzogMDsKICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjMjMyMzIzOwogICAgICAgIGJvcmRlci1sZWZ0OiAwOwogICAgICAgIG1hcmdpbi10b3A6IDIwcHg7CiAgICAgICAgbWFyZ2luLWJvdHRvbTogMjBweDsKICAgIH0KCgogICAgdGgsIHRkIHsKICAgICAgICBib3JkZXItbGVmdDogMXB4IHNvbGlkICMyMzIzMjM7CiAgICAgICAgcGFkZGluZzogOHB4OwogICAgICAgIGxpbmUtaGVpZ2h0OiAyMHB4OwogICAgICAgIHRleHQtYWxpZ246IGxlZnQ7CiAgICAgICAgdmVydGljYWwtYWxpZ246IHRvcDsKICAgICAgICBib3JkZXItdG9wOiAxcHggc29saWQgIzIzMjMyMzsKICAgIH0KCgoKCiAgICBjb2RlewogICAgICAgIGJhY2tncm91bmQ6ICMzYjNiMmU7CiAgICAgICAgcGFkZGluZzogMCA1cHg7CiAgICAgICAgbWFyZ2luOiAwIDJweDsKICAgIH0KCiAgICBwcmV7CiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgIzEzMTMxMzsKICAgICAgICBtYXJnaW4tdG9wOiAxLjJlbTsKICAgICAgICBtYXJnaW4tYm90dG9tOiAxLjJlbTsKICAgICAgICBwYWRkaW5nOiAxNXB4IDEwcHg7CiAgICAgICAgZGlzcGxheTogYmxvY2s7CiAgICAgICAgb3ZlcmZsb3c6IGF1dG87CiAgICAgICAgYmFja2dyb3VuZDogIzMzMzMzMzsKICAgICAgICBmb250LXNpemU6IDkwJTsKICAgIH0KCiAgICAud2l0aF9saW5lcyBwcmV7CiAgICAgICAgYm9yZGVyOm5vbmU7CiAgICAgICAgbWFyZ2luLXRvcDogMC4yZW07CiAgICAgICAgbWFyZ2luLWJvdHRvbTogMC4yZW07CiAgICAgICAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7CiAgICB9CgogICAgLmlzX2NvZGVfZmlsZSBwcmV7CiAgICAgICAgYm9yZGVyOiBub25lOwogICAgICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50OwogICAgfQoKICAgIC5jb2RlaGlsaXRlIHByZXsKICAgICAgICB3b3JkLXdyYXA6IG5vcm1hbDsKICAgIH0KCiAgICBwcmUgY29kZXsKICAgICAgICBib3JkZXI6bm9uZTsKICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgbWFyZ2luOiAwOwogICAgfQoKICAgIHByZSBwewogICAgICAgIG1hcmdpbjogMDsKICAgICAgICBwYWRkaW5nOiAwOwogICAgfQoKICAgIC5jb2RlaGlsaXRlIHRoLCAuY29kZWhpbGl0ZSB0ZHsKICAgICAgICBsaW5lLWhlaWdodDogMS44ZW07CiAgICB9CgoKICAgIGF7CiAgICAgICAgY29sb3I6ICM3N2I4N2Y7CiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogICAgICAgIC8vYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHRyYW5zcGFyZW50OwogICAgfQoKICAgIGE6aG92ZXJ7CiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7CiAgICAgICAgLy9ib3JkZXItYm90dG9tOiAxcHggc29saWQgIzc3Yjg3ZjsKICAgIH0KCiAgICBzdHJvbmcgewogICAgICAgIGNvbG9yOiAjZmZmZmZmOwogICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkOwogICAgfQoKCiAgICAvKiBmb3IgbWFya2Rvd24gKi8KCiAgICAubGluZW5vcyBwcmV7CgkJYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7CgkJYm9yZGVyOiBub25lOwoJfQoJLyoKCS5saW5lbm9zewoJICAgIHBhZGRpbmc6IDAgMCAwIDEwcHg7Cgl9CgkqLwoKICAgIC50b2N7CiAgICAgICAgYmFja2dyb3VuZDogIzE1MTUxNTsKICAgICAgICBib3JkZXItcmFkaXVzOiA1cHg7CiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgIzEzMTMxMzsKICAgICAgICBtYXJnaW46IDI3cHggMCA0N3B4IDA7CiAgICAgICAgcGFkZGluZzogMTBweCAwOwogICAgfQoKICAgIC50b2MgdWx7CiAgICAgICAgLy9wYWRkaW5nOiA1cHggNDJweDsKICAgIH0KCiAgICAudG9jIHVsIGxpewogICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgbWFyZ2luOiAwOwogICAgfQogICAgLnRvYyBhewogICAgICAgIGNvbG9yOiAjYTViMGMwOwogICAgfQoKCgogICAgLnRvZG9faXRlbXsKICAgICAgICBsaXN0LXN0eWxlOiBub25lOwogICAgICAgIG1hcmdpbi1sZWZ0OiAtMS41ZW0KICAgIH0KICAgIC50b2RvX2l0ZW0gLnRvZG9faXRlbSB7CiAgICAgICAgbWFyZ2luLWxlZnQ6IGF1dG87CiAgICB9CgogICAgLnRvZG9fZG9uZV9pdGVtewogICAgICAgIGNvbG9yOiAjNTU1NTU1OwogICAgfQoKICAgIC50b2RvX3VuZG9uZV9pdGVtewogICAgICAgIGNvbG9yOiAjZGRkZGRkOwogICAgfQoKCiAgICB1bCBsaS50b2RvX2l0ZW17CglsaXN0LXN0eWxlLXR5cGU6IG5vbmU7CiAgICB9CgogICAgdWwgbGkudG9kb19pdGVtOmJlZm9yZXsKICAgICAgICBjb250ZW50OiAnXDI3MTUnOwogICAgICAgIHBhZGRpbmctcmlnaHQ6IDAuN2VtOwogICAgICAgIGZvbnQtZmFtaWx5OiBhcmlhbDsKICAgIH0KCiAgICB1bCBsaS50b2RvX2RvbmVfaXRlbTpiZWZvcmV7CiAgICAgICAgY29udGVudDogJ1wyNzEzJzsKICAgICAgICBwYWRkaW5nLXJpZ2h0OiAwLjdlbTsKICAgICAgICBmb250LWZhbWlseTogYXJpYWw7CiAgICB9CgogICAgdWwgbGkudG9kb19pdGVtIGlucHV0ewogICAgICAgIGRpc3BsYXk6bm9uZQogICAgfQoKCiAgICAvKnB5Z21lbnRzKi8KCiAgICAuY29kZWhpbGl0ZXsKICAgICAgICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudCAhaW1wb3J0YW50OwogICAgfQoKICAgIHRhYmxlLmNvZGVoaWxpdGV0YWJsZXsgYm9yZGVyOm5vbmU7IH0KCgogICAgLmNvZGVoaWxpdGV0YWJsZSB0ZHsgYm9yZGVyOiBub25lOyBwYWRkaW5nOiAwO30KCiAgICAuZmxvdy1ncmFwaGlje3RleHQtYWxpZ246IGNlbnRlcn0KCgogICAgdGFibGUsIHRyLCB0ZCwgdGgsIHRib2R5LCB0aGVhZCwgdGZvb3QsIC5tZF9lY2hhcnRzLCBibG9ja3F1b3RlIC5tZF9saW5lewogICAgICAgIHBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZCAhaW1wb3J0YW50OwogICAgfQoKICAgIC5mb290bm90ZXMgLm1kX2xpbmV7CiAgICAgICAgZGlzcGxheTogaW5saW5lICFpbXBvcnRhbnQ7CiAgICB9CgoKICAgIC5pbWdfcnRfOTB7CiAgICAgICAgdHJhbnNmb3JtOnJvdGF0ZSg5MGRlZyk7CiAgICAgICAgLW1zLXRyYW5zZm9ybTpyb3RhdGUoOTBkZWcpOwogICAgICAgIC1tb3otdHJhbnNmb3JtOnJvdGF0ZSg5MGRlZyk7CiAgICAgICAgLXdlYmtpdC10cmFuc2Zvcm06cm90YXRlKDkwZGVnKTsKICAgICAgICAtby10cmFuc2Zvcm06cm90YXRlKDkwZGVnKTsKICAgIH0KICAgIC5pbWdfcnRfMTgwewogICAgICAgIHRyYW5zZm9ybTpyb3RhdGUoMTgwZGVnKTsKICAgICAgICAtbXMtdHJhbnNmb3JtOnJvdGF0ZSgxODBkZWcpOwogICAgICAgIC1tb3otdHJhbnNmb3JtOnJvdGF0ZSgxODBkZWcpOwogICAgICAgIC13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgxODBkZWcpOwogICAgICAgIC1vLXRyYW5zZm9ybTpyb3RhdGUoMTgwZGVnKTsKICAgIH0KICAgIC5pbWdfcnRfMjcwewogICAgICAgIHRyYW5zZm9ybTpyb3RhdGUoMjcwZGVnKTsKICAgICAgICAtbXMtdHJhbnNmb3JtOnJvdGF0ZSgyNzBkZWcpOwogICAgICAgIC1tb3otdHJhbnNmb3JtOnJvdGF0ZSgyNzBkZWcpOwogICAgICAgIC13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgyNzBkZWcpOwogICAgICAgIC1vLXRyYW5zZm9ybTpyb3RhdGUoMjcwZGVnKTsKICAgIH0KCiAgICAubWRfaGFzX2Jsb2NrX2JlbG93ewogICAgICAgIG1hcmdpbi1ib3R0b206IDAuMWVtICFpbXBvcnRhbnQ7CiAgICB9CiAgICAubWRfaGFzX2Jsb2NrX2JlbG93X2ltZ3sKICAgICAgICBtYXJnaW4tYm90dG9tOiAtMC42ZW0gIWltcG9ydGFudDsKICAgIH0KCgoKICAgICAgICBzcGFuLm1kX2xpbmV7bWFyZ2luLWJvdHRvbTowLjVlbTsgZGlzcGxheTpibG9jazsgbGluZS1oZWlnaHQ6MS44MTg2NjI1fQogICAgICAgIC5tZF9saW5lIGJyeyBkaXNwbGF5OiBub25lO30KICAgICAgICAuY29kZWhpbGl0ZSAuaGxsIHsgYmFja2dyb3VuZC1jb2xvcjogIzQ5NDgzZSB9Ci5jb2RlaGlsaXRlICB7IGJhY2tncm91bmQ6ICMyNzI4MjI7IGNvbG9yOiAjZjhmOGYyIH0KLmNvZGVoaWxpdGUgLmMgeyBjb2xvcjogIzc1NzE1ZSB9IC8qIENvbW1lbnQgKi8KLmNvZGVoaWxpdGUgLmVyciB7IGNvbG9yOiAjOTYwMDUwOyBiYWNrZ3JvdW5kLWNvbG9yOiAjMWUwMDEwIH0gLyogRXJyb3IgKi8KLmNvZGVoaWxpdGUgLmsgeyBjb2xvcjogIzY2ZDllZiB9IC8qIEtleXdvcmQgKi8KLmNvZGVoaWxpdGUgLmwgeyBjb2xvcjogI2FlODFmZiB9IC8qIExpdGVyYWwgKi8KLmNvZGVoaWxpdGUgLm4geyBjb2xvcjogI2Y4ZjhmMiB9IC8qIE5hbWUgKi8KLmNvZGVoaWxpdGUgLm8geyBjb2xvcjogI2Y5MjY3MiB9IC8qIE9wZXJhdG9yICovCi5jb2RlaGlsaXRlIC5wIHsgY29sb3I6ICNmOGY4ZjIgfSAvKiBQdW5jdHVhdGlvbiAqLwouY29kZWhpbGl0ZSAuY2ggeyBjb2xvcjogIzc1NzE1ZSB9IC8qIENvbW1lbnQuSGFzaGJhbmcgKi8KLmNvZGVoaWxpdGUgLmNtIHsgY29sb3I6ICM3NTcxNWUgfSAvKiBDb21tZW50Lk11bHRpbGluZSAqLwouY29kZWhpbGl0ZSAuY3AgeyBjb2xvcjogIzc1NzE1ZSB9IC8qIENvbW1lbnQuUHJlcHJvYyAqLwouY29kZWhpbGl0ZSAuY3BmIHsgY29sb3I6ICM3NTcxNWUgfSAvKiBDb21tZW50LlByZXByb2NGaWxlICovCi5jb2RlaGlsaXRlIC5jMSB7IGNvbG9yOiAjNzU3MTVlIH0gLyogQ29tbWVudC5TaW5nbGUgKi8KLmNvZGVoaWxpdGUgLmNzIHsgY29sb3I6ICM3NTcxNWUgfSAvKiBDb21tZW50LlNwZWNpYWwgKi8KLmNvZGVoaWxpdGUgLmdkIHsgY29sb3I6ICNmOTI2NzIgfSAvKiBHZW5lcmljLkRlbGV0ZWQgKi8KLmNvZGVoaWxpdGUgLmdlIHsgZm9udC1zdHlsZTogaXRhbGljIH0gLyogR2VuZXJpYy5FbXBoICovCi5jb2RlaGlsaXRlIC5naSB7IGNvbG9yOiAjYTZlMjJlIH0gLyogR2VuZXJpYy5JbnNlcnRlZCAqLwouY29kZWhpbGl0ZSAuZ3MgeyBmb250LXdlaWdodDogYm9sZCB9IC8qIEdlbmVyaWMuU3Ryb25nICovCi5jb2RlaGlsaXRlIC5ndSB7IGNvbG9yOiAjNzU3MTVlIH0gLyogR2VuZXJpYy5TdWJoZWFkaW5nICovCi5jb2RlaGlsaXRlIC5rYyB7IGNvbG9yOiAjNjZkOWVmIH0gLyogS2V5d29yZC5Db25zdGFudCAqLwouY29kZWhpbGl0ZSAua2QgeyBjb2xvcjogIzY2ZDllZiB9IC8qIEtleXdvcmQuRGVjbGFyYXRpb24gKi8KLmNvZGVoaWxpdGUgLmtuIHsgY29sb3I6ICNmOTI2NzIgfSAvKiBLZXl3b3JkLk5hbWVzcGFjZSAqLwouY29kZWhpbGl0ZSAua3AgeyBjb2xvcjogIzY2ZDllZiB9IC8qIEtleXdvcmQuUHNldWRvICovCi5jb2RlaGlsaXRlIC5rciB7IGNvbG9yOiAjNjZkOWVmIH0gLyogS2V5d29yZC5SZXNlcnZlZCAqLwouY29kZWhpbGl0ZSAua3QgeyBjb2xvcjogIzY2ZDllZiB9IC8qIEtleXdvcmQuVHlwZSAqLwouY29kZWhpbGl0ZSAubGQgeyBjb2xvcjogI2U2ZGI3NCB9IC8qIExpdGVyYWwuRGF0ZSAqLwouY29kZWhpbGl0ZSAubSB7IGNvbG9yOiAjYWU4MWZmIH0gLyogTGl0ZXJhbC5OdW1iZXIgKi8KLmNvZGVoaWxpdGUgLnMgeyBjb2xvcjogI2U2ZGI3NCB9IC8qIExpdGVyYWwuU3RyaW5nICovCi5jb2RlaGlsaXRlIC5uYSB7IGNvbG9yOiAjYTZlMjJlIH0gLyogTmFtZS5BdHRyaWJ1dGUgKi8KLmNvZGVoaWxpdGUgLm5iIHsgY29sb3I6ICNmOGY4ZjIgfSAvKiBOYW1lLkJ1aWx0aW4gKi8KLmNvZGVoaWxpdGUgLm5jIHsgY29sb3I6ICNhNmUyMmUgfSAvKiBOYW1lLkNsYXNzICovCi5jb2RlaGlsaXRlIC5ubyB7IGNvbG9yOiAjNjZkOWVmIH0gLyogTmFtZS5Db25zdGFudCAqLwouY29kZWhpbGl0ZSAubmQgeyBjb2xvcjogI2E2ZTIyZSB9IC8qIE5hbWUuRGVjb3JhdG9yICovCi5jb2RlaGlsaXRlIC5uaSB7IGNvbG9yOiAjZjhmOGYyIH0gLyogTmFtZS5FbnRpdHkgKi8KLmNvZGVoaWxpdGUgLm5lIHsgY29sb3I6ICNhNmUyMmUgfSAvKiBOYW1lLkV4Y2VwdGlvbiAqLwouY29kZWhpbGl0ZSAubmYgeyBjb2xvcjogI2E2ZTIyZSB9IC8qIE5hbWUuRnVuY3Rpb24gKi8KLmNvZGVoaWxpdGUgLm5sIHsgY29sb3I6ICNmOGY4ZjIgfSAvKiBOYW1lLkxhYmVsICovCi5jb2RlaGlsaXRlIC5ubiB7IGNvbG9yOiAjZjhmOGYyIH0gLyogTmFtZS5OYW1lc3BhY2UgKi8KLmNvZGVoaWxpdGUgLm54IHsgY29sb3I6ICNhNmUyMmUgfSAvKiBOYW1lLk90aGVyICovCi5jb2RlaGlsaXRlIC5weSB7IGNvbG9yOiAjZjhmOGYyIH0gLyogTmFtZS5Qcm9wZXJ0eSAqLwouY29kZWhpbGl0ZSAubnQgeyBjb2xvcjogI2Y5MjY3MiB9IC8qIE5hbWUuVGFnICovCi5jb2RlaGlsaXRlIC5udiB7IGNvbG9yOiAjZjhmOGYyIH0gLyogTmFtZS5WYXJpYWJsZSAqLwouY29kZWhpbGl0ZSAub3cgeyBjb2xvcjogI2Y5MjY3MiB9IC8qIE9wZXJhdG9yLldvcmQgKi8KLmNvZGVoaWxpdGUgLncgeyBjb2xvcjogI2Y4ZjhmMiB9IC8qIFRleHQuV2hpdGVzcGFjZSAqLwouY29kZWhpbGl0ZSAubWIgeyBjb2xvcjogI2FlODFmZiB9IC8qIExpdGVyYWwuTnVtYmVyLkJpbiAqLwouY29kZWhpbGl0ZSAubWYgeyBjb2xvcjogI2FlODFmZiB9IC8qIExpdGVyYWwuTnVtYmVyLkZsb2F0ICovCi5jb2RlaGlsaXRlIC5taCB7IGNvbG9yOiAjYWU4MWZmIH0gLyogTGl0ZXJhbC5OdW1iZXIuSGV4ICovCi5jb2RlaGlsaXRlIC5taSB7IGNvbG9yOiAjYWU4MWZmIH0gLyogTGl0ZXJhbC5OdW1iZXIuSW50ZWdlciAqLwouY29kZWhpbGl0ZSAubW8geyBjb2xvcjogI2FlODFmZiB9IC8qIExpdGVyYWwuTnVtYmVyLk9jdCAqLwouY29kZWhpbGl0ZSAuc2IgeyBjb2xvcjogI2U2ZGI3NCB9IC8qIExpdGVyYWwuU3RyaW5nLkJhY2t0aWNrICovCi5jb2RlaGlsaXRlIC5zYyB7IGNvbG9yOiAjZTZkYjc0IH0gLyogTGl0ZXJhbC5TdHJpbmcuQ2hhciAqLwouY29kZWhpbGl0ZSAuc2QgeyBjb2xvcjogI2U2ZGI3NCB9IC8qIExpdGVyYWwuU3RyaW5nLkRvYyAqLwouY29kZWhpbGl0ZSAuczIgeyBjb2xvcjogI2U2ZGI3NCB9IC8qIExpdGVyYWwuU3RyaW5nLkRvdWJsZSAqLwouY29kZWhpbGl0ZSAuc2UgeyBjb2xvcjogI2FlODFmZiB9IC8qIExpdGVyYWwuU3RyaW5nLkVzY2FwZSAqLwouY29kZWhpbGl0ZSAuc2ggeyBjb2xvcjogI2U2ZGI3NCB9IC8qIExpdGVyYWwuU3RyaW5nLkhlcmVkb2MgKi8KLmNvZGVoaWxpdGUgLnNpIHsgY29sb3I6ICNlNmRiNzQgfSAvKiBMaXRlcmFsLlN0cmluZy5JbnRlcnBvbCAqLwouY29kZWhpbGl0ZSAuc3ggeyBjb2xvcjogI2U2ZGI3NCB9IC8qIExpdGVyYWwuU3RyaW5nLk90aGVyICovCi5jb2RlaGlsaXRlIC5zciB7IGNvbG9yOiAjZTZkYjc0IH0gLyogTGl0ZXJhbC5TdHJpbmcuUmVnZXggKi8KLmNvZGVoaWxpdGUgLnMxIHsgY29sb3I6ICNlNmRiNzQgfSAvKiBMaXRlcmFsLlN0cmluZy5TaW5nbGUgKi8KLmNvZGVoaWxpdGUgLnNzIHsgY29sb3I6ICNlNmRiNzQgfSAvKiBMaXRlcmFsLlN0cmluZy5TeW1ib2wgKi8KLmNvZGVoaWxpdGUgLmJwIHsgY29sb3I6ICNmOGY4ZjIgfSAvKiBOYW1lLkJ1aWx0aW4uUHNldWRvICovCi5jb2RlaGlsaXRlIC52YyB7IGNvbG9yOiAjZjhmOGYyIH0gLyogTmFtZS5WYXJpYWJsZS5DbGFzcyAqLwouY29kZWhpbGl0ZSAudmcgeyBjb2xvcjogI2Y4ZjhmMiB9IC8qIE5hbWUuVmFyaWFibGUuR2xvYmFsICovCi5jb2RlaGlsaXRlIC52aSB7IGNvbG9yOiAjZjhmOGYyIH0gLyogTmFtZS5WYXJpYWJsZS5JbnN0YW5jZSAqLwouY29kZWhpbGl0ZSAuaWwgeyBjb2xvcjogI2FlODFmZiB9IC8qIExpdGVyYWwuTnVtYmVyLkludGVnZXIuTG9uZyAqLw==">
+    <!--header_scripts-->
+</head>
+<body>
+
+
+<div class="post">
+    
+    <div class="post_body">
+        <h1 id="toc_0">场景：</h1>
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">老师一对一教学（老师学生音视频对讲，并共享老师端电脑屏幕供学生观看，及教学过程视频回放）</span>
+</p>
+
+</blockquote>
+
+<h1 id="toc_1">应用平台</h1>
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">依赖于腾讯云互动直播</span>
+</p>
+
+</blockquote>
+<img onerror="this.src='file:///D:/ihziluoh/source/markdown/代码整理/_image/2018-01-17-11-41-36.jpg';this.onerror=null;"  class="" src="/代码整理/_image/2018-01-17-11-41-36.jpg" alt="" title="" >
+<ol>
+<li>客户端：
+
+<ul>
+<li>学生端：ILIVE IOS ，ILIVE Android</li>
+<li>老师端：ILIVE Web(IE)（https://github.com/zhaoyang21cn/iLiveSDK_Web_Suixinbo）（老师教学端参考本实例 使用Js iLiveSDK （https://zhaoyang21cn.github.io/iLiveSDK_Help/web_help/））</li>
+</ul></li>
+<li>服务端：SuiXinBoPHPServer（https://github.com/zhaoyang21cn/SuiXinBoPHPServer）（*服务端只用了腾讯云的用户Sig生成工具，未使用其余程序逻辑*）</li>
+</ol>
+<img onerror="this.src='file:///D:/ihziluoh/source/markdown/代码整理/_image/2018-01-15-11-35-20.jpg';this.onerror=null;"  class="" src="/代码整理/_image/2018-01-15-11-35-20.jpg" alt="" title="" >
+<h1 id="toc_2">实现步骤：</h1>
+
+<h2 id="toc_3">服务器端：</h2>
+
+<pre><code>服务端主要完成：使用腾讯云TSL （https://cloud.tencent.com/document/product/269/1510)生成用户sig及房间roomid （服务器本地程序生成）</code></pre>
+
+<!--block_code_end-->
+<p class="md_block md_has_block_below md_has_block_below_ol">
+    <span class="md_line">客户端与服务器交互流程：<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='file:///D:/ihziluoh/source/markdown/代码整理/_image/2018-01-16-14-56-58.jpg';this.onerror=null;"  class="" src="/代码整理/_image/2018-01-16-14-56-58.jpg" alt="" title="" ></span>
+</p>
+
+
+<ol>
+<li>配置腾讯云开发后台：</li>
+</ol>
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">App基础设置：帐号体系集成-&gt;独立模式（用户数据存储在自有服务器）保存后会有*公私钥下载* 需上传到自有服务器</span>
+</p>
+
+</blockquote>
+<img onerror="this.src='file:///D:/ihziluoh/source/markdown/代码整理/_image/2018-01-16-15-17-31.jpg';this.onerror=null;"  class="" src="/代码整理/_image/2018-01-16-15-17-31.jpg" alt="" title="" ><img onerror="this.src='file:///D:/ihziluoh/source/markdown/代码整理/_image/2018-01-16-15-18-48.jpg';this.onerror=null;"  class="" src="/代码整理/_image/2018-01-16-15-18-48.jpg" alt="" title="" >
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">2.用户sig生成代码编写(源代码在事例的model\Account.php文件夹内)：</span>
+</p>
+
+
+<ul>
+<li> <em>qcloud_appid为 互动直播应用管理 appid:</em></li>
+<li> <em>qcloud_path 为 SuiXinBoPHPServer 下deps（可改名称）目录</em></li>
+<li><em>deps/keys 下建立以appid为文件夹名称的文件夹 放入对应应用公私钥</em></li>
+<li> <em>设置deps/sig 读写权限 /bin 可执行权限（建议直接设置deps目录可执行权限）</em></li>
+</ul>
+<div class="codehilite code_lang_php  highlight"><pre><span></span>    <span class="k">static</span> <span class="nv">$qcloud_appid</span><span class="o">=</span><span class="mi">111</span><span class="p">;</span>
+    <span class="k">static</span> <span class="nv">$qcloud_path</span><span class="o">=</span><span class="s2">&quot;/deps&quot;</span><span class="p">;</span>
+    <span class="cm">/* 功能：生成sig</span>
+<span class="cm">     * 说明：对当前用户使用指定的sdkappid, 和指定的秘钥文件路径（private_key_path）使用</span>
+<span class="cm">     *         tls_licence_tools工具生成sig，并sig存储在临时文件中。成功，sig返回给用户后，</span>
+<span class="cm">     *        失败返回空；同时删除此临时sig文件。此sig用于前端SDK的登录。</span>
+<span class="cm">     * 备注：这里使用临时文件原因一是受工具tls_licence_tools只能读写文件方式所限；二是</span>
+<span class="cm">     *        如果使用单个文件过渡将导致并发读写错误的问题。</span>
+<span class="cm">     *        php另外一种集成sig的方式参考这里：</span>
+<span class="cm">     *                https://www.qcloud.com/document/product/269/1510</span>
+<span class="cm">     *                http://bbs.qcloud.com/thread-22519-1-1.html</span>
+<span class="cm">     */</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">genUserSig</span><span class="p">(</span><span class="nv">$uid</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$sdkappid</span><span class="o">=</span><span class="nx">self</span><span class="o">::</span><span class="nv">$qcloud_appid</span><span class="p">;</span>
+        <span class="nv">$private_key_path</span><span class="o">=</span><span class="nx">self</span><span class="o">::</span><span class="nv">$qcloud_path</span><span class="o">.</span><span class="s1">&#39;/keys&#39;</span> <span class="o">.</span> <span class="s1">&#39;/&#39;</span> <span class="o">.</span><span class="nv">$sdkappid</span> <span class="o">.</span> <span class="s1">&#39;/private_key&#39;</span><span class="p">;</span>
+        <span class="c1">// 创建临时sig文件</span>
+        <span class="nv">$sig</span> <span class="o">=</span> <span class="nx">self</span><span class="o">::</span><span class="na">mktemp</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nv">$sig</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">// 生成sig</span>
+        <span class="nv">$cmd</span> <span class="o">=</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$qcloud_path</span> <span class="o">.</span> <span class="s1">&#39;/bin/tls_licence_tools&#39;</span>
+            <span class="o">.</span> <span class="s1">&#39; &#39;</span> <span class="o">.</span> <span class="s1">&#39;gen&#39;</span>
+            <span class="o">.</span> <span class="s1">&#39; &#39;</span> <span class="o">.</span> <span class="nb">escapeshellarg</span><span class="p">(</span><span class="nv">$private_key_path</span><span class="p">)</span>
+            <span class="o">.</span> <span class="s1">&#39; &#39;</span> <span class="o">.</span> <span class="nb">escapeshellarg</span><span class="p">(</span><span class="nv">$sig</span><span class="p">)</span>
+            <span class="o">.</span> <span class="s1">&#39; &#39;</span> <span class="o">.</span> <span class="nb">escapeshellarg</span><span class="p">(</span><span class="nv">$sdkappid</span><span class="p">)</span>
+            <span class="o">.</span> <span class="s1">&#39; &#39;</span> <span class="o">.</span> <span class="nb">escapeshellarg</span><span class="p">(</span><span class="nv">$uid</span><span class="p">);</span>
+        <span class="nv">$ret</span> <span class="o">=</span> <span class="nb">exec</span><span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="nv">$out</span><span class="p">,</span> <span class="nv">$status</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$status</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 读取sig</span>
+        <span class="nv">$out</span><span class="o">=</span><span class="k">array</span><span class="p">();</span>
+        <span class="nv">$cmd</span> <span class="o">=</span> <span class="s1">&#39;cat &#39;</span> <span class="o">.</span> <span class="s1">&#39; &#39;</span> <span class="o">.</span> <span class="nb">escapeshellarg</span><span class="p">(</span><span class="nv">$sig</span><span class="p">);</span>
+        <span class="nv">$ret</span> <span class="o">=</span> <span class="nb">exec</span><span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="nv">$out</span><span class="p">,</span> <span class="nv">$status</span><span class="p">);</span>
+
+        <span class="nx">self</span><span class="o">::</span><span class="na">rmtemp</span><span class="p">(</span><span class="nv">$sig</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$status</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="nv">$out</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* 功能：创建临时sig文件</span>
+<span class="cm">    * 说明：使用工具mktemp在deps/sig目录下创建临时文件sxb_sig.XXXXXXXXXX</span>
+<span class="cm">    *        成功返回临时文件的绝对路径，失败返回null</span>
+<span class="cm">    */</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">mktemp</span><span class="p">()</span>
+    <span class="p">{</span>
+
+        <span class="nv">$cmd</span> <span class="o">=</span> <span class="s1">&#39;mktemp -t -p &#39;</span> <span class="o">.</span>  <span class="nx">self</span><span class="o">::</span><span class="nv">$qcloud_path</span><span class="o">.</span> <span class="s1">&#39;/sig sxb_sig.XXXXXXXXXX&#39;</span><span class="p">;</span>
+        <span class="nv">$ret</span> <span class="o">=</span> <span class="nb">exec</span><span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="nv">$out</span><span class="p">,</span> <span class="nv">$status</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$status</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nv">$out</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="cm">/* 功能：删除临时sig文件</span>
+<span class="cm">     * 说明：使用工具rm强制删除在deps/sig目录下指定的临时文件</span>
+<span class="cm">     */</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">rmtemp</span><span class="p">(</span><span class="nv">$tmp</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$cmd</span> <span class="o">=</span> <span class="s1">&#39;rm -f &#39;</span> <span class="o">.</span> <span class="nv">$tmp</span><span class="p">;</span>
+        <span class="nv">$ret</span> <span class="o">=</span> <span class="nb">exec</span><span class="p">(</span><span class="nv">$cmd</span><span class="p">,</span> <span class="nv">$out</span><span class="p">,</span> <span class="nv">$status</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$status</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_4">老师端IE</h2>
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">完成老师端视频对讲及共享桌面功能，参考腾讯云实例 https://github.com/zhaoyang21cn/iLiveSDK_Web_Suixinbo，去掉事例注册登陆逻辑 有自有后台直接进入直播间 只使用iLiveSDK 与腾讯云交互和页面事件 去掉与服务器交互及发消息等功能</span>
+</p>
+
+</blockquote>
+
+<h3 id="toc_5">代码配置：</h3>
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">把随心播代码中的appid和accountType修改成开发者自己的。即在demo.js(也可以自己创建JS编写相关代码)中找到OnInit方法，找到sdk = new ILiveSDK(1400027849, 11656, &quot;iLiveSDKCom&quot;)语句，用自己的SDKAppID（互动直播应用SDKAppID）和accountType（互动直播后台-&gt;APP基础设置-&gt;帐号体系集成）替换前两个参数</span>
+</p>
+
+</blockquote>
+
+<h3 id="toc_6">程序执行步骤（参考demo.js代码）：</h3>
+
+<ol>
+<li>
+<p class="md_block">
+    <span class="md_line">在html的head节点中引入js文件,如下:</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/iLiveSDK.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
+<!--block_code_end--></li>
+<li>
+<p class="md_block">
+    <span class="md_line">在html的body节点中加载cab文件,路径（对应服务器本地路径）如下</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span>    <span class="p">&lt;</span><span class="nt">object</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;iLiveSDKCom&quot;</span> <span class="na">classid</span><span class="o">=</span><span class="s">&quot;CLSID:54E71417-216D-47A2-9224-C991A099C531&quot;</span> <span class="na">codebase</span><span class="o">=</span><span class="s">&quot;路径/iLiveSDK.cab#version=版本号&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">object</span><span class="p">&gt;</span>
+</pre></div>
+
+<!--block_code_end--></li>
+<li>
+<p class="md_block">
+    <span class="md_line">初始化iLiveSDK</span>
+</p>
+
+<div class="codehilite code_lang_javascript  highlight"><pre><span></span>  <span class="nx">sdk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ILiveSDK</span><span class="p">(</span><span class="mi">123455</span><span class="p">,</span> <span class="mi">1234</span><span class="p">,</span> <span class="s2">&quot;iLiveSDKCom&quot;</span><span class="p">);</span>
+  <span class="nx">sdk</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">toastr</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s1">&#39;初始化成功&#39;</span><span class="p">);</span>
+            <span class="c1">//绑定老师端视频展示区域</span>
+            <span class="nx">g_localRender</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ILiveRender</span><span class="p">(</span><span class="s2">&quot;localRender&quot;</span><span class="p">);</span>
+            <span class="c1">//绑定学生端视频展示区域</span>
+            <span class="nx">g_renders</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ILiveRender</span><span class="p">(</span><span class="s2">&quot;render0&quot;</span><span class="p">);</span>
+
+            <span class="c1">//更多视频源  </span>
+            <span class="c1">//   g_renders[1] = new ILiveRender(&quot;render1&quot;);</span>
+            <span class="c1">//g_renders[2] = new ILiveRender(&quot;render2&quot;); </span>
+
+            <span class="c1">//屏幕共享区域视频展示区域</span>
+            <span class="nx">g_screenRender</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ILiveRender</span><span class="p">(</span><span class="s2">&quot;screenRender&quot;</span><span class="p">);</span>
+            <span class="c1">//设置监听事件</span>
+            <span class="nx">sdk</span><span class="p">.</span><span class="nx">setForceOfflineListener</span><span class="p">(</span><span class="nx">onForceOfflineCallback</span><span class="p">);</span>
+            <span class="nx">sdk</span><span class="p">.</span><span class="nx">setRoomDisconnectListener</span><span class="p">(</span><span class="nx">onRoomDisconnect</span><span class="p">);</span>
+            <span class="nx">sdk</span><span class="p">.</span><span class="nx">setRoomEventListener</span><span class="p">(</span><span class="nx">onRoomEvent</span><span class="p">);</span>
+            <span class="nx">sdk</span><span class="p">.</span><span class="nx">setDeviceOperationCallback</span><span class="p">(</span><span class="nx">onDeviceOperation</span><span class="p">);</span>
+
+            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;version&quot;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">sdk</span><span class="p">.</span><span class="nx">version</span><span class="p">();</span>
+            <span class="nx">sdk</span><span class="p">.</span><span class="nx">setMessageListener</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">showMessage</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
+            <span class="p">});</span>
+        <span class="p">},</span>
+        <span class="kd">function</span><span class="p">(</span><span class="nx">errMsg</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">toastr</span><span class="p">.</span><span class="nx">warning</span><span class="p">(</span><span class="s2">&quot;初始化失败! 错误码: &quot;</span> <span class="o">+</span> <span class="nx">errMsg</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s2">&quot;描述: &quot;</span> <span class="o">+</span> <span class="nx">errMsg</span><span class="p">.</span><span class="nx">desc</span><span class="p">);</span>
+        <span class="p">});</span>
+</pre></div>
+
+<!--block_code_end--></li>
+<li>
+<p class="md_block">
+    <span class="md_line">用户初始化及创建并进入房间（房间重复创建 不会覆盖之前的房间 也可重新进入）：</span>
+</p>
+
+<div class="codehilite code_lang_javascript  highlight"><pre><span></span><span class="kd">function</span> <span class="nx">OnBtnLogin</span><span class="p">(</span><span class="nx">roomid</span><span class="p">,</span><span class="nx">uid</span><span class="p">,</span><span class="nx">sig</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//调用SDK 登陆事件 触发成功登陆或登陆错误事件</span>
+    <span class="nx">sdk</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="nx">uid</span><span class="p">,</span> <span class="nx">sig</span><span class="p">,</span> <span class="nx">onLoginSuc</span><span class="p">(</span><span class="nx">roomid</span><span class="p">),</span> <span class="nx">onLoginErr</span><span class="p">);</span>
+    <span class="c1">//全局保存用户id 跟sig</span>
+    <span class="nx">g_id</span><span class="o">=</span><span class="nx">uid</span><span class="p">;</span>
+    <span class="nx">g_userSig</span> <span class="o">=</span> <span class="nx">sig</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//登陆成功</span>
+<span class="kd">function</span> <span class="nx">onLoginSuc</span><span class="p">(</span><span class="nx">roomid</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//OnBtnGetList();</span>
+    <span class="nx">toastr</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s2">&quot;登录成功&quot;</span><span class="p">);</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//创建房间</span>
+        <span class="nx">OnBtnCreateRoom</span><span class="p">(</span><span class="nx">roomid</span><span class="p">,</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#rotateScreen&#39;</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span><span class="s2">&quot;checked&quot;</span><span class="p">))</span>
+    <span class="p">},</span><span class="mi">1000</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">//创建房间</span>
+<span class="kd">function</span> <span class="nx">OnBtnCreateRoom</span><span class="p">(</span><span class="nx">roomid</span><span class="p">,</span><span class="nx">rotate</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">toastr</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s2">&quot;初始化房间:&quot;</span><span class="o">+</span><span class="nx">roomid</span><span class="p">);</span>
+            <span class="nx">sdk</span><span class="p">.</span><span class="nx">createRoom</span><span class="p">(</span><span class="nx">roomid</span><span class="p">,</span> <span class="nx">E_iLiveAuthBits</span><span class="p">.</span><span class="nx">AuthBit_LiveMaster</span><span class="p">,</span> <span class="s2">&quot;LiveMaster&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                <span class="nx">toastr</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s2">&quot;进入房间:&quot;</span><span class="o">+</span><span class="nx">roomid</span><span class="p">);</span>
+                <span class="nx">g_roomnum</span><span class="o">=</span><span class="nx">roomid</span><span class="p">;</span>
+                <span class="nx">g_role</span> <span class="o">=</span> <span class="nx">E_Role</span><span class="p">.</span><span class="nx">LiveMaster</span><span class="p">;</span>
+                <span class="nx">jsonObj</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">&quot;roomid&quot;</span><span class="o">:</span> <span class="nx">roomid</span><span class="p">,</span>
+                <span class="p">};</span>
+                <span class="c1">//可以增加逻辑 与服务器Ajax交互</span>
+                <span class="c1">//进入房间后打开摄像头 麦克风及扬声器</span>
+                <span class="nx">OnBtnOpenCamera</span><span class="p">();</span>
+                <span class="nx">OnBtnOpenMic</span><span class="p">();</span>
+                <span class="nx">OnBtnOpenPlayer</span><span class="p">();</span>
+            <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">errMsg</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">toastr</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;错误码1:&quot;</span> <span class="o">+</span> <span class="nx">errMsg</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s2">&quot; 错误信息:&quot;</span> <span class="o">+</span> <span class="nx">errMsg</span><span class="p">.</span><span class="nx">desc</span><span class="p">);</span>
+            <span class="p">},</span><span class="nx">rotate</span><span class="p">);</span> <span class="c1">//这个是sdk的事件</span>
+
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end--></li>
+<li>
+<p class="md_block">
+    <span class="md_line">打开关闭桌面共享：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">文档：<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='file:///D:/ihziluoh/source/markdown/代码整理/_image/2018-01-16-16-24-23.jpg';this.onerror=null;"  class="" src="/代码整理/_image/2018-01-16-16-24-23.jpg" alt="" title="" ></span>
+</p>
+
+<div class="codehilite code_lang_javascript  highlight"><pre><span></span>    <span class="kd">function</span> <span class="nx">OnBtnOpenScreenShareArea</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">g_role</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">toastr</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;被连麦之后才可以打开屏幕分享&#39;</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kd">var</span> <span class="nx">x0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">y0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">x1</span> <span class="o">=</span> <span class="nx">screen</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">y1</span> <span class="o">=</span> <span class="nx">screen</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">g_screenRender</span><span class="p">){</span>
+            <span class="nx">sdk</span><span class="p">.</span><span class="nx">closeScreenShare</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="c1">//</span>
+        <span class="nx">y0</span><span class="o">=</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">height</span><span class="o">-</span><span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span><span class="p">);</span>
+        <span class="nx">x1</span><span class="o">=</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#divwh&quot;</span><span class="p">).</span><span class="nx">width</span><span class="p">());</span>
+        <span class="nx">y1</span> <span class="o">=</span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">heigh</span><span class="p">;</span>
+        <span class="c1">//切换的时候free需要时间，做一个settimeout</span>
+        <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">sdk</span><span class="p">.</span><span class="nx">openScreenShareArea</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">);</span>
+        <span class="p">},</span><span class="mi">100</span><span class="p">)</span>
+    <span class="p">};</span>
+
+    <span class="kd">function</span> <span class="nx">OnBtnCloseScreenShare</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">g_role</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">toastr</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;被连麦之后才可以打开屏幕分享&#39;</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nx">sdk</span><span class="p">.</span><span class="nx">closeScreenShare</span><span class="p">();</span>
+    <span class="p">};</span>
+</pre></div>
+
+<!--block_code_end--></li>
+</ol>
+
+<h2 id="toc_7">视频录制：</h2>
+
+<pre><code>视频录制使用直播码模式下旁路直播 （开始录制由iLiveSDK控制）录制回放视频（需在直播控制台开启直播录制）
+直播码模式:每一个旁路直播对应一个唯一的直播码 可在创建房间是保存直播码 用于回放视频地址的更新</code></pre>
+
+<!--block_code_end-->
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">   直播码=BIZID_MD5(房间号_用户名_数据类型)。<br /></span>
+    <span class="md_line">    字符串传输按utf-8编码。摄像头数据类型是main，屏幕分享的数据类型是aux。而BIZID是一个固定的参数，可以在直播控制台的顶部找到它。<br /></span>
+    <span class="md_line">    假如BIZID=8888,用户名=14y2l2c，房间号=293710，在进行摄像头分享，则MD5(293710_14y2l2c_main)=81265058829fd2e50c8ec2ac78d55127。那么直播码就是8888_81265058829fd2e50c8ec2ac78d55127。</span>
+</p>
+
+</blockquote>
+<img onerror="this.src='file:///D:/ihziluoh/source/markdown/代码整理/_image/2018-01-16-16-31-48.jpg';this.onerror=null;"  class="" src="/代码整理/_image/2018-01-16-16-31-48.jpg" alt="" title="" >
+<ol>
+<li>直播录制配置（回调URL 会在直播录制成功会通知服务器）</li>
+</ol>
+<img onerror="this.src='file:///D:/ihziluoh/source/markdown/代码整理/_image/2018-01-17-11-38-16.jpg';this.onerror=null;"  class="" src="/代码整理/_image/2018-01-17-11-38-16.jpg" alt="" title="" >
+<ol>
+<li>
+<p class="md_block">
+    <span class="md_line">通过iLiveSDK 开启旁路直播推流 代码如下：</span>
+</p>
+
+<div class="codehilite code_lang_javascript  highlight"><pre><span></span> <span class="kd">function</span> <span class="nx">startPush</span><span class="p">(){</span>
+        <span class="kd">var</span> <span class="nx">option1</span><span class="o">=</span><span class="k">new</span> <span class="nx">ILivePushStreamOption</span><span class="p">(</span><span class="nx">E_iLivePushDataType</span><span class="p">.</span><span class="nx">SCREEN</span><span class="p">,</span><span class="nx">E_iLivePushEncode</span><span class="p">.</span><span class="nx">HLS</span><span class="p">,</span> <span class="nx">E_iLivePushRecordFileType</span><span class="p">.</span><span class="nx">NONE</span><span class="p">)</span>
+        <span class="nx">sdk</span><span class="p">.</span><span class="nx">startPushStream</span><span class="p">(</span><span class="nx">option1</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">params</span><span class="p">){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;startPushStream SCREEN success&#39;</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">params</span><span class="p">);</span>
+        <span class="p">},</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;error  SCREEN&#39;</span><span class="p">);</span>
+        <span class="p">});</span>
+
+        <span class="kd">var</span> <span class="nx">option</span><span class="o">=</span><span class="k">new</span> <span class="nx">ILivePushStreamOption</span><span class="p">(</span><span class="nx">E_iLivePushDataType</span><span class="p">.</span><span class="nx">CAMERA</span><span class="p">,</span><span class="nx">E_iLivePushEncode</span><span class="p">.</span><span class="nx">HLS</span><span class="p">,</span> <span class="nx">E_iLivePushRecordFileType</span><span class="p">.</span><span class="nx">NONE</span><span class="p">)</span>
+        <span class="nx">sdk</span><span class="p">.</span><span class="nx">startPushStream</span><span class="p">(</span><span class="nx">option</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">params</span><span class="p">){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;startPushStream CAMERA success&#39;</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">params</span><span class="p">);</span>
+        <span class="p">},</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;error CAMERA&#39;</span><span class="p">);</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end--></li>
+<li>
+<p class="md_block">
+    <span class="md_line"> 直播推流结束后 腾讯云会通过回调地址通知服务器（可以更新回放视频地址）：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>        <span class="nv">$qcloud_api_key</span><span class="o">=</span><span class="mi">11111</span><span class="p">;</span>
+        <span class="nv">$arr</span><span class="o">=</span><span class="nb">file_get_contents</span><span class="p">(</span><span class="s1">&#39;php://input&#39;</span><span class="p">);</span>
+        <span class="nv">$req_arr</span><span class="o">=</span><span class="nb">json_decode</span><span class="p">(</span><span class="nv">$arr</span><span class="p">,</span><span class="k">true</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="nv">$req_arr</span><span class="p">[</span><span class="s1">&#39;sign&#39;</span><span class="p">]</span><span class="o">!=</span><span class="nx">MD5</span><span class="p">(</span><span class="nv">$qcloud_api_key</span><span class="o">.</span><span class="nv">$req_arr</span><span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">])){</span>
+            <span class="k">die</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">);</span>
+        <span class="p">};</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="nb">intval</span><span class="p">(</span><span class="nv">$req_arr</span><span class="p">[</span><span class="s1">&#39;event_type&#39;</span><span class="p">])){</span>
+            <span class="c1">//目前腾讯云支持三种消息类型的通知：0 — 断流； 1 — 推流；100 — 新的录制文件已生成；200 — 新的截图文件已生成。</span>
+            <span class="k">case</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//断流</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="p">;</span><span class="c1">//推流</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">100</span><span class="p">;</span>
+                <span class="k">if</span><span class="p">(</span><span class="nv">$req_arr</span><span class="p">[</span><span class="s1">&#39;file_format&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;mp4&#39;</span><span class="p">){</span>
+                    <span class="nv">$video_type</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+                <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nv">$req_arr</span><span class="p">[</span><span class="s1">&#39;file_format&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;hls&#39;</span><span class="p">){</span>
+                    <span class="c1">//M3u8</span>
+                    <span class="nv">$video_type</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="c1">//100 新的录制文件已生成</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">die</span><span class="p">(</span><span class="s1">&#39;{&quot;code&quot;:0}&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end--></li>
+</ol>
+    </div>
+</div>
+
+
+        <script src="https://static.farbox.com/service/static_3rd/staticfile/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS_HTML-full.js" type= "text/javascript">
+           MathJax.Hub.Config({
+               tex2jax: {
+                    inlineMath: [ ['$','$']],
+                    displayMath: [ ['$$','$$'] ]
+                    },
+                "HTML-CSS": {
+                    imageFont: null,
+                    availableFonts: ["TeX"],
+                    preferredFont: "TeX"
+                },
+                extensions: ["jsMath2jax.js", 'tex2jax.js', 'MatchWebFonts.js'],
+                messageStyle: "none"
+            });
+        </script>
+        
+        <script>
+            MathJax.Hub.signal.Interest(function (message) {
+                if (message[0]=='End Process' && navigator.appVersion.indexOf('MarkEditor')!='-1'){
+                    if ($){
+                        $('.mtext span').css('font-size', '82%');
+                        $('.MathJax').css('font-size', '1.52em');
+                    }
+                }
+            })
+        </script>
+        
+
+</body>
+</html>
