@@ -15,6 +15,7 @@
 # 实现步骤：
 ## 服务器端：
 > 服务端主要完成：使用腾讯云TSL （https://cloud.tencent.com/document/product/269/1510)生成用户sig及房间roomid （服务器本地程序生成）
+
 客户端与服务器交互流程：
 ![](./_image/2018-01-16-14-56-58.jpg)
 
