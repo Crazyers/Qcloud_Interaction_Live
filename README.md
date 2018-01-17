@@ -12,8 +12,8 @@
     - 老师端：ILIVE Web(IE)（https://github.com/zhaoyang21cn/iLiveSDK_Web_Suixinbo）（老师教学端参考本实例 使用Js iLiveSDK （https://zhaoyang21cn.github.io/iLiveSDK_Help/web_help/））
 2. 服务端：SuiXinBoPHPServer（https://github.com/zhaoyang21cn/SuiXinBoPHPServer）（*服务端只用了腾讯云的用户Sig生成工具，未使用其余程序逻辑*）
 ![](./_image/2018-01-15-11-35-20.jpg)
-#实现步骤：
-##服务器端：
+# 实现步骤：
+## 服务器端：
     服务端主要完成：使用腾讯云TSL （https://cloud.tencent.com/document/product/269/1510)生成用户sig及房间roomid （服务器本地程序生成）
 客户端与服务器交互流程：
 ![](./_image/2018-01-16-14-56-58.jpg)
